@@ -136,7 +136,7 @@
             <ul class="list angle-double-right list-border">
               <li><a href="{{ url('index') }}">Home</a></li>
               <li><a href="{{ url('program') }}">Program</a></li>
-              <li><a href="{{ url('kegiatan') }}">Kegiatan</a></li>
+              <li><a href="{{ url('blog') }}">Kegiatan</a></li>
               <li><a href="{{ url('gallery') }}">Gallery</a></li>
               <li><a href="{{ url('donate') }}">Donate</a></li>
             </ul>
