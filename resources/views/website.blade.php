@@ -8,7 +8,21 @@
 <meta name="description" content="{{ config('app.name') }} | {{ isset($page_description) ? $page_description : 'Default' }}" />
 <meta name="keywords" content="{{ isset($page_description) ? $page_description : 'Default' }}" />
 <meta name="author" content="{{ config('app.name') }}" />
-
+<!-- facebook share meta -->
+<meta property="og:url"           content="{{ isset($og_url) ? $og_url : '' }}" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="{{ isset($og_title) ? $og_title : '' }}" />
+<meta property="og:description"   content="{{ isset($og_description) ? $og_description : '' }}" />
+<meta property="og:image"         content="{{ isset($og_image) ? 'http://childrencharityfoundation.org/storage/app/public/upload/event/'.$og_image : '' }}" />
+<!-- end fb share meta -->
+<!-- twitter card -->
+<meta name="twitter:card" content="{{ isset($og_title) ? $og_title : '' }}">
+<meta name="twitter:site" content="{{ isset($og_url) ? $og_url : '' }}">
+<meta name="twitter:creator" content="Children Charity Foundation">
+<meta name="twitter:title" content="{{ isset($og_title) ? $og_title : '' }}">
+<meta name="twitter:description" content="{{ isset($og_description) ? $og_description : '' }}">
+<meta name="twitter:image" content="{{ isset($og_image) ? 'http://childrencharityfoundation.org/storage/app/public/upload/event/'.$og_image : '' }}">
+<!-- end twittercard -->
 <!-- Page Title -->
 <title>{{ config('app.name') }} | {{ isset($page_header) ? $page_header : 'Default' }}</title>
 

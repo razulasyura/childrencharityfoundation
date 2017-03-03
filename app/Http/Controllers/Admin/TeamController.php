@@ -88,7 +88,7 @@ class TeamController extends Controller
         $time = date('YmdHis');
         $imagename = $oldPhoto; 
         $destinationPath = storage_path('app/public/upload/team/thumb');
-        $thumb_img = Image::make($photo->getRealPath())->fit(270, 230);
+        $thumb_img = Image::make($photo->getRealPath())->fit(350, 400);
         $thumb_img->save($destinationPath.'/'.$imagename,100);           
         $destinationPath = storage_path('app/public/upload/team');
         $photo->move($destinationPath, $imagename);

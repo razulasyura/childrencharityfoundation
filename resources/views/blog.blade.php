@@ -20,7 +20,7 @@
       <div class="container">
         <div class="row multi-row-clearfix">
           <div class="blog-posts">
-           @foreach($events as $event)
+           @foreach($events as $jum=>$event)
             <div class="col-md-4">
               <article class="post clearfix mb-30 bg-lighter">
                 <div class="entry-header">

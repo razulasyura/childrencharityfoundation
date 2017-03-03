@@ -98,7 +98,7 @@ class FrontController extends Controller
         $data = array(
 			'page_header'=> title_case('Gallery'),
 			'page_description'=> title_case('Gallery'),
-			'galleries' => Gallery::paginate(12),
+			'galleries' => Gallery::orderBy('id','desc')->paginate(12),
             'albums'=> Album::getAlbumLatest(),
             'contact' => Contact::whereId(1)->firstOrFail(),
             );
@@ -204,7 +204,7 @@ class FrontController extends Controller
             'page_header'=> title_case('blog'),
             'page_description'=> title_case('blog'),
             'albums'=> Album::getAlbumLatest(),
-            'events' => Event::paginate(6),
+            'events' => Event::orderBy('id','desc')->paginate(6),
             'contact' => Contact::whereId(1)->firstOrFail(),
             );
         // dd($data);
@@ -213,16 +213,21 @@ class FrontController extends Controller
 
     public function blog_detail($id)
     {
+        $og = Event::whereId($id)->firstOrFail();
         $data = array(
             'page_header'=> title_case('blog'),
             'page_description'=> title_case('detail blog'),
             'albums'=> Album::getAlbumLatest(),
             'contact' => Contact::whereId(1)->firstOrFail(),
             'event' => Event::whereId($id)->firstOrFail(),
-            'events' => Event::getEventRandom()
+            'events' => Event::getEventRandom(),
+            'og_url' => 'childrencharityfoundation.org/blog_detail/'.$og['id'],
+            'og_title' => $og['name'],
+            'og_description' => $og['detail'],
+            'og_image' => $og['photo']
             );
         $galleries = Gallery::getGalleryByAlbum($data['event']->albums_id);
-        // dd($galleries);
+        // dd($data);
         return view('blog_detail',$data)->withGalleries($galleries);
     }
 

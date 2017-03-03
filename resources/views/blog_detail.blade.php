@@ -56,22 +56,13 @@
                     </div>
                     <!-- Portfolio Item End -->
                     @endforeach
-
-
-                  <!-- <div class="mt-30 mb-0">
-                    <h5 class="pull-left flip mt-10 mr-20 text-theme-colored">Share:</h5>
-                    <ul class="styled-icons icon-circled m-0">
-                      <li><a href="#" data-bg-color="#3A5795"><i class="fa fa-facebook text-white"></i></a></li>
-                      <li><a href="#" data-bg-color="#55ACEE"><i class="fa fa-twitter text-white"></i></a></li>
-                      <li><a href="#" data-bg-color="#A11312"><i class="fa fa-google-plus text-white"></i></a></li>
-                    </ul>
-                  </div> -->
                 </div>
               </article>
              
               
               <div id="comments" class="comments-area pt-50">
-
+              <h3 class="mt-0 line-bottom line-height-1">Share to<span class="text-theme-colored"> Social Media</span></h3>
+              <div id="share"></div>
                 <!-- Facebook Comments plugin 
                 <div id="fb-root"></div>
                 <script>(function(d, s, id) {
@@ -88,6 +79,9 @@
                 <!-- Facebook Comments end -->
 
               </div>
+              <br/>
+              <h3 class="mt-0 line-bottom line-height-1">Ruang<span class="text-theme-colored"> Diskusi</span></h3>
+              <div id="disqus_thread"></div>
             </div>
           </div>
           <div class="col-md-3">
@@ -115,4 +109,38 @@
     </section> 
 
   </div>
+@endsection
+@section('css')
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-flat.css" />
+@endsection
+@section('js')
+<!-- CK EDITOR -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+<script>
+  $("#share").jsSocials({
+      showLabel: false,
+  showCount: false,
+  shares: ["twitter", "facebook", "googleplus", "linkedin", "pinterest"]
+      });
+</script>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://children-charity-foundation.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 @endsection
