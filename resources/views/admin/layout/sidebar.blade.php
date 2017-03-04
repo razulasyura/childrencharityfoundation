@@ -41,6 +41,7 @@
              <li><a href="{{ url('admin/event') }}"><i class="fa fa-navicon"></i> <span>Events</span></a></li>
              <li><a href="{{ url('admin/album') }}"><i class="fa fa-camera"></i> <span>Album</span></a></li>
              <li><a href="{{ url('admin/gallery') }}"><i class="fa fa-photo"></i> <span>Gallery</span></a></li>
+             <li><a target="blank" href="{{ url('https://docs.google.com/spreadsheets/d/1f44aeJAZ1AEeSjbbubdBugWJxghZqmF8POCG2Qix42A/edit#gid=1569567678') }}"><i class="fa fa-newspaper-o"></i> <span>Data Registrasi</span></a></li>
              <!-- <li><a href="{{ url('/admin/user') }}"><i class="fa fa-user"></i> <span>User</span></a></li> -->
             {{--
             <li class="treeview">

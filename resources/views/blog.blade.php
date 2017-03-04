@@ -38,8 +38,7 @@
                     </div>
                   </div>
                   <p class="mt-10">{!! str_limit($event->detail,120) !!}</p>
-                  <a href="{{ url('blog_detail/'.strtolower($event->id)) }}" class="btn-read-more">Read more</a>
-                  <div class="clearfix"></div>
+                  <a href="{{ url('blog_detail/'.strtolower($event->id)) }}" class="btn btn-colored btn-theme-colored btn-sm">Read more</a>
                 </div>
               </article>
             </div>
