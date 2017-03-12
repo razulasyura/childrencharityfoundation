@@ -223,6 +223,13 @@
 
 <!-- Footer Scripts -->
 <!-- external javascripts -->
+// Google Automatic Translate Page
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'id', includedLanguages: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
 <script src="{{ asset('public/maf_assets/js/jquery-2.2.0.min.js') }}"></script>
 <script src="{{ asset('public/maf_assets/js/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('public/maf_assets/js/bootstrap.min.js') }}"></script>
